@@ -2,14 +2,11 @@ using static System.Console;
 using System.Collections.Generic;
 public static class Machine
 {
-    public static int Combination(List<Cubo> cubo)
+    public static HashSet<string> Combination(Cubo cubo)
     {
         HashSet<string> combSet = new HashSet<string>();
 
-        List<Cubo> temp = new List<Cubo>();
-        foreach (Cubo c in cubo){
-            temp.Add(new Cubo(c.Top, c.Bottom, c.Front, c.Left, c.Right, c.Back));
-        }
+        Cubo temp = new Cubo(cubo.Top, cubo.Bottom, cubo.Front, cubo.Left, cubo.Right, cubo.Back);
 
         for (int i = 0; i < 6; i++)
         {
@@ -18,25 +15,18 @@ public static class Machine
                 string comb = $"{temp.Front},{temp.Top},{temp.Bottom},{temp.Back}";
                 combSet.Add(comb);
 
-                // Rotação lateral (gira em torno do eixo vertical)
+                // Rotação lateral
                 RotateAroundVertical(temp);
             }
 
-            // Rotação do cubo (muda o eixo vertical)
+            // Rotação do cubo
             if (i < 3)
                 RotateForward(temp);
             else
                 RotateSideways(temp);
         }
 
-        foreach (var comb in combSet)
-        {
-            WriteLine(comb);
-        }
-
-        WriteLine($"Total de combinações distintas: {combSet.Count}");
-
-        return combSet.Count;
+        return combSet;
     }
 
     private static void RotateAroundVertical(Cubo c)
@@ -65,4 +55,45 @@ public static class Machine
         c.Bottom = c.Right;
         c.Right = temp;
     }
+
+    public static int CombinateCube(HashSet<string> c1, HashSet<string> c2, HashSet<string> c3, HashSet<string> c4)
+    {
+
+        string[] partesA = [];
+        string[] partesB = [];
+        string[] partesC = [];
+        string[] partesD = [];
+
+        int count = 0;
+
+        foreach (var a in c1)
+        {
+            foreach (var b in c2)
+            {
+                foreach (var c in c3)
+                {
+                    foreach (var d in c4)
+                    {
+                        partesA = a.Split(',');
+                        partesB = b.Split(',');
+                        partesC = c.Split(',');
+                        partesD = d.Split(',');
+
+                        if (partesA[0] != partesB[0] && partesA[0] != partesC[0] && partesA[0] != partesD[0] && partesB[0] != partesC[0] && partesB[0] != partesD[0] && partesC[0] != partesD[0]
+                        && partesA[1] != partesB[1] && partesA[1] != partesC[1] && partesA[1] != partesD[1] && partesB[1] != partesC[1] && partesB[1] != partesD[1] && partesC[1] != partesD[1]
+                        && partesA[2] != partesB[2] && partesA[2] != partesC[2] && partesA[2] != partesD[2] && partesB[2] != partesC[2] && partesB[2] != partesD[2] && partesC[2] != partesD[2]
+                        && partesA[3] != partesB[3] && partesA[3] != partesC[3] && partesA[3] != partesD[3] && partesB[3] != partesC[3] && partesB[3] != partesD[3] && partesC[3] != partesD[3])
+                        {
+                            WriteLine(" | "+a+" | "+b+" | "+c+" | "+d+" | ");
+                            count += 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        return count;
+    }
+
+
 }

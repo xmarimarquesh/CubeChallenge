@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-
-
 public class Cubo
 {
     public string Top { get; set; }
@@ -20,6 +16,4 @@ public class Cubo
         Right = right;
         Back = back;
     }
-
-    
 }

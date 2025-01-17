@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\disrct\\Desktop\\Mari\\C#\\desafioCubos\\desafioCubos.csproj": {}
+    "C:\\Users\\disrct\\Desktop\\Mari\\C#\\CubeChallenge\\desafioCubos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\disrct\\Desktop\\Mari\\C#\\desafioCubos\\desafioCubos.csproj": {
+    "C:\\Users\\disrct\\Desktop\\Mari\\C#\\CubeChallenge\\desafioCubos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Mari\\C#\\desafioCubos\\desafioCubos.csproj",
+        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Mari\\C#\\CubeChallenge\\desafioCubos.csproj",
         "projectName": "desafioCubos",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\Mari\\C#\\desafioCubos\\desafioCubos.csproj",
+        "projectPath": "C:\\Users\\disrct\\Desktop\\Mari\\C#\\CubeChallenge\\desafioCubos.csproj",
         "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\Mari\\C#\\desafioCubos\\obj\\",
+        "outputPath": "C:\\Users\\disrct\\Desktop\\Mari\\C#\\CubeChallenge\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config"

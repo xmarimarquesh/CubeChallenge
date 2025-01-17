@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("desafioCubos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7446201a8e1962c5068c33f95fd03872090eef4")]
 [assembly: System.Reflection.AssemblyProductAttribute("desafioCubos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("desafioCubos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
